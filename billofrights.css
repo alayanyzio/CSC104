@@ -1,0 +1,33 @@
+/*stylizing the body*/
+body{
+    background-color: blanchedalmond; /*sets background color*/
+    border: 5px dotted steelblue; /*border around whole page*/
+    border-radius: 20px; /*creates a rounded edge for border*/
+    margin-bottom: 20px; /*space from the content and border*/
+    padding: 20px; /*creates more space*/
+}
+/*stylizing the first heading (title)*/
+h1{
+    color:steelblue; /*sets text color*/
+    font-family: cursive; /*cursive font to make headings stand out*/
+    font-size:xx-large; /*made the text larger to make the "title" stand out*/
+    text-shadow: 1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black; /*created multiple shadows from different directions to make an outline effect*/
+    text-align: center; /*centers text*/
+}
+/*styling the other headings (amendment and number)*/
+h2{
+    color: steelblue; /*sets text color*/
+    font-family: cursive; /*cursive font to make headings stand out*/
+    text-align: center; /*centers text*/
+}
+/*styling th paragraphs (text describing amendments*/
+p{
+    color:black; /*a readable text color*/
+    font-family: 'Times New Roman', Times, serif; /*readble font*/
+    font-size: medium; /*set size of font to be visually appealing with the heading sizes*/
+    text-align: center; /*centers text*/ 
+    font-weight: bold; /*bolder text to increase readability*/
+}
