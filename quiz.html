@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Top Artist Are You?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f8e8f1, #e3f2fd);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+      margin: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #4d4d8b;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    /* Main container */
+    main {
+      width: 90%;
+      max-width: 800px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Questions styling */
+    section h3 {
+      color: #555;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    /* Button styling */
+    button {
+      display: block;
+      margin: 20px auto;
+      background: #6a93d4;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4d6fb3;
+    }
+
+    /* Result section */
+    #result {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #album-link {
+      text-decoration: none;
+      color: #6a93d4;
+      font-weight: 600;
+    }
+
+    #album-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+      <!--Header section to introduce the quiz. This section contains a title and a brief description.-->
+  <header>
+    <!-- The main title of the quiz -->
+    <h1>Which 2024 Artist Are You?</h1>
+    
+    <!-- A short description or instruction for the quiz -->
+    <p>
+        Based on my Spotify Wrapped 2024, these are my top five artists: 
+        Lana del Rey, 5 Seconds of Summer, Nirvana, Mazzy Star, and Charli XCX.
+        Take this quiz to find out which one best matches your personality!
+    </p>
+  </header>
+  <!--Main container for the quiz content.- This will hold the quiz questions and results.-->
+  <main>
+    <!-- Section for quiz questions -->
+    <section id="quiz">
+        <form id="quiz-form">
+      <!-- Each question will be a subsection -->
+        <!-- Question 1 -->
+      <div>
+        <h3>1. What’s your ideal way to spend a Saturday?</h3>
+        <!-- List of answer options -->
+        <ul>
+          <li>
+            <input type="radio" name="question-1" value="Mazzy Star">
+            <label>Walking through a quiet, dreamy forest</label>
+          </li>
+          <li>
+            <input type="radio" name="question-1" value="Charli XCX">
+            <label>Dancing at a rave until sunrise</label>
+          </li>
+          <li>
+            <input type="radio" name="question-1" value="Lana del Rey">
+            <label>Driving along the coast, lost in thought</label>
+          </li>
+          <li>
+            <input type="radio" name="question-1" value="Nirvana">
+            <label>Hanging out in a grunge café</label>
+          </li>
+          <li>
+            <input type="radio" name="question-1" value="5 Seconds of Summer">
+            <label>Going to a concert with friends</label>
+          </li>
+        </ul>
+      </div>
+     <!-- Question 2 -->
+     <div>
+        <h3>2. What’s your favorite color palette?</h3>
+        <ul>
+          <li>
+            <input type="radio" name="question-2" value="Charli XCX">
+            <label>Bold and glittery pinks, silvers, and purples</label>
+          </li>
+          <li>
+            <input type="radio" name="question-2" value="Nirvana">
+            <label>Dark tones like black and grey</label>
+          </li>
+          <li>
+            <input type="radio" name="question-2" value="5 Seconds of Summer">
+            <label>Bright reds, yellows, and edgy neons</label>
+          </li>
+          <li>
+            <input type="radio" name="question-2" value="Lana del Rey">
+            <label>Muted pastels, blues, and whites</label>
+          </li>
+          <li>
+            <input type="radio" name="question-2" value="Mazzy Star">
+            <label>Soft, hazy shades like lavender and peach</label>
+          </li>
+        </ul>
+      </div>
+   <!-- Question 3 -->
+   <div>
+    <h3>3. What’s your go-to activity when you’re feeling down?</h3>
+    <ul>
+      <li>
+        <input type="radio" name="question-3" value="5 Seconds of Summer">
+        <label>Calling up your best friend for advice</label>
+      </li>
+      <li>
+        <input type="radio" name="question-3" value="Charli XCX">
+        <label>Going out and dancing</label>
+      </li>
+      <li>
+        <input type="radio" name="question-3" value="Mazzy Star">
+        <label>Lying in bed and daydreaming</label>
+      </li>
+      <li>
+        <input type="radio" name="question-3" value="Nirvana">
+        <label>Blasting music and tuning out the world</label>
+      </li>
+      <li>
+        <input type="radio" name="question-3" value="Lana del Rey">
+        <label>Writing poetry or journaling</label>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Question 4 -->
+  <div>
+    <h3>4. What’s your dream vacation?</h3>
+    <ul>
+      <li>
+        <input type="radio" name="question-4" value="5 Seconds of Summer">
+        <label>Backpacking through Europe with friends</label>
+      </li>
+      <li>
+        <input type="radio" name="question-4" value="Mazzy Star">
+        <label>Staying in a cozy cottage in the woods</label>
+      </li>
+      <li>
+        <input type="radio" name="question-4" value="Lana del Rey">
+        <label>A vintage-inspired road trip through California</label>
+      </li>
+      <li>
+        <input type="radio" name="question-4" value="Charli XCX">
+        <label>Partying in Ibiza or Tokyo</label>
+      </li>
+      <li>
+        <input type="radio" name="question-4" value="Nirvana">
+        <label>Visiting Seattle’s music scene</label>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Question 5 -->
+  <div>
+    <h3>5. What’s your favorite type of music?</h3>
+    <ul>
+      <li>
+        <input type="radio" name="question-5" value="Nirvana">
+        <label>Raw and edgy grunge</label>
+      </li>
+      <li>
+        <input type="radio" name="question-5" value="Lana del Rey">
+        <label>Nostalgic, soulful ballads</label>
+      </li>
+      <li>
+        <input type="radio" name="question-5" value="Mazzy Star">
+        <label>Dreamy, atmospheric indie</label>
+      </li>
+      <li>
+        <input type="radio" name="question-5" value="5 Seconds of Summer">
+        <label>Energetic pop-punk and rock</label>
+      </li>
+      <li>
+        <input type="radio" name="question-5" value="Charli XCX">
+        <label>Hyperpop and electronic beats</label>
+      </li>
+    </ul>
+  </div>
+  <button type="button" id="submit-button">Submit</button>
+  <!-- Display the result and album link -->
+<div id="result"></div>
+<a id="album-link" href="#" target="_blank"></a>
+ </form>
+<script>
+    const submitButton = document.getElementById('submit-button');
+    // Function to calculate the result based on the answers
+function calculateResult() {
+  // Initialize score object to track answers for each artist
+  const responses = {
+    'Mazzy Star': 0,
+    'Charli XCX': 0,
+    'Lana del Rey': 0,
+    'Nirvana': 0,
+    '5 Seconds of Summer': 0,
+  };
+
+  // Loop through each checked radio button and update the corresponding artist's score
+  const allRadioButtons = document.querySelectorAll('input[type="radio"]:checked');
+  allRadioButtons.forEach(button => {
+    responses[button.value]++;
+  });
+
+  // Determine the artist with the highest score
+  let maxScore = 0;
+  let result = '';
+  for (let artist in responses) {
+    if (responses[artist] > maxScore) {
+      maxScore = responses[artist];
+      result = artist;
+    }
+  }
+
+  return result;
+}
+
+// Add an event listener to the submit button
+submitButton.addEventListener('click', function () {
+  // Get the result based on the user's answers
+  const result = calculateResult();
+  
+  // Show the result in an alert box
+  alert(`Your 2024 artist match is: ${result}!`);
+
+  // Define album links based on the result
+  const albumLinks = {
+    'Lana del Rey': 'https://youtube.com/playlist?list=PLMFUaRAk0WsaVFnALxOm_2FE8qPXf9UIg&si=RGPz9v4GZr4q-5JG',
+    '5 Seconds of Summer': 'https://youtube.com/playlist?list=PL2dAEt_H0QEJCucX1-g6gMYEgZwsVCrzl&si=UGxAIl76tAybGmdE', 
+    'Nirvana': 'https://youtube.com/playlist?list=PLMu3h09ANNRVoo0cXSBQkJN_8LA4yluCx&si=Q-sVRqbkmph7ib-m', 
+    'Mazzy Star': 'https://youtube.com/playlist?list=PLI6kLIhBBwmTlkFdIOHZ7VKna45VK-OEU&si=18vYPfWmeQKTjdGs',
+    'Charli XCX': 'https://youtube.com/playlist?list=PL-2HG0C5jJQEcsK5zkdNWRJ4Cuee3e63-&si=cBo9Gc1EwyY8sRyp', 
+  };
+
+  // Display the result in a div (this div should be part of your HTML)
+  const resultDiv = document.getElementById('result');
+  resultDiv.textContent = `Your 2024 artist match is: ${result}!`;
+
+  // Display the album link below the result (this should also be in your HTML)
+  const albumLink = document.getElementById('album-link');
+  albumLink.href = albumLinks[result];
+  albumLink.textContent = `Listen to them here!`;
+});
+</script>
+</body>
+</html>
