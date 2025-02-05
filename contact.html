@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Alaya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header to create structure and organize logo/navigation to the very top of page-->
+    <header>
+        <!--groups logo seperate from nav bar, has class to reference later in CSS if needed-->
+                <div class="logo">
+                    <!--linking logo image, alt text descring for accessability-->
+                    <img src="Logo.png" alt="Alaya's Portfolio logo">
+                </div>
+                <!--navigation bar linking all of the pages for the site-->
+                <nav>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallary.html">Gallery</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </nav>
+            </header>
+            <div id="contact">
+                <h1>Contact Me</h1>
+                <p>Have any questions or suggestions? Contact me below!</p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <!--link to email for direct contact-->
+                        <a href="mailto:anyzio88042@uat.edu">Email Me</a>
+                        <p>OR</p>
+                        <!--contact form if user would rather be contacted-->
+                        <form id="contactForm">
+                            <!--email input-->
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required><br>
+                            <!--comment input-->
+                            <label for="comment">Your Comment:</label>
+                            <textarea name="comment" id="comment" required></textarea>
+                            <!--button to submit-->
+                            <button type="submit">Submit</button>
+                        </form>
+                        <div class="contact-photo">
+                            <img src="contact.jpg" alt="photo of email symbol">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <!--my logo-->
+                <img src="Logo.png" alt="Alaya's Portfolio Logo">
+                <p>Alaya Nyzio 2025.</p>
+                <!--removed link to contact page, as this is the page-->
+                <p>University of Advancing Technology: CSC104</p>
+                <!--attribution for image used on this page-->
+                <p>Image by: <a href="https://www.freepik.com/" target="_blank">Freepik</a></p>
+                </div>
+            </footer>
+            <script>
+                // aetrieve the existing comments display as empty
+                let comments = JSON.parse(localStorage.getItem("comments")) || [];
+                const form = document.getElementById("contactForm"); // get the form using its id
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // submitting wont refresh the entire page
+                    // get the input values for email and comment 
+                    const email = document.getElementById("email").value.trim();  //remove any extra spaces
+                    const comment = document.getElementById("comment").value.trim();  //remove any extra spaces
+                    if (email && comment) {  //makes sure both parts are completed
+                        // create object
+                        const newComment = {
+                            email: email,
+                            comments: comment
+                        };
+                        comments = [...comments, newComment];  //add new comment to the array
+                        // save the updated comments
+                        localStorage.setItem("comments", JSON.stringify(comments));
+                        // clears form after user submits
+                        form.reset();
+                        // confirms submit
+                        alert("Successfully Submitted!");
+                    } else {
+                        // warning if only one part is filled in
+                        alert("Please fill in both the email and comment.");
+                    }
+                });
+            </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--this is a "private" html doc made with the intent of comment storage-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h1>Submitted Comments</h1>  
+    <ul id="commentsList">
+        <!--comments display -->
+    </ul>
+    <script>
+        // get the comments 
+        const comments = JSON.parse(localStorage.getItem("comments")) || [];
+        const commentsList = document.getElementById("commentsList"); 
+        // check if there are comments
+        if (comments.length > 0) {
+            // loop through the comments and display 
+            for (let i = 0; i < comments.length; i++) {
+                const entry = comments[i]; // get each object
+                const listItem = document.createElement("li"); // make a new <li> for each comment
+                listItem.innerHTML = `
+                    <strong>Email:</strong> ${entry.email} <br>
+                    <strong>Comment:</strong> ${entry.comments}
+                `; // set the content for each comment
+                commentsList.appendChild(listItem); // add the comment to the list
+            }
+        } else {
+            const noCommentsMessage = document.createElement("p");
+            noCommentsMessage.textContent = "No comments yet!";
+            commentsList.appendChild(noCommentsMessage); //prevents blank section if there hasn't benn comments
+        }
+    </script>
+</body>
+</html>
